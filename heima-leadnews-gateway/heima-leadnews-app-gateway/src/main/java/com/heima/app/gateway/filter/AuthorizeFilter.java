@@ -30,7 +30,7 @@ public class AuthorizeFilter implements Ordered, GlobalFilter {
             return chain.filter(exchange);
         }
 
-        // 1
+        // 12
 
         //3.获取token
         String token = request.getHeaders().getFirst("token");
