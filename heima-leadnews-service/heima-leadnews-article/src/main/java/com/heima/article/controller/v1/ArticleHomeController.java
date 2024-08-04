@@ -1,4 +1,4 @@
-package com.heima.article.controller.v1.v1;
+package com.heima.article.controller.v1;
 
 import com.heima.article.service.ApArticleService;
 import com.heima.common.constants.ArticleConstants;
