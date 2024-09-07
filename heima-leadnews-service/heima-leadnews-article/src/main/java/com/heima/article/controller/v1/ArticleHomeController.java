@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author zangyt
+ */
 @RestController
 @RequestMapping("/api/v1/article")
 public class ArticleHomeController {
