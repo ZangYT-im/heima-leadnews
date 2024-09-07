@@ -96,7 +96,7 @@ public class MinIOFileStorageService implements FileStorageService {
                     .build();
             minioClient.putObject(putObjectArgs);
             StringBuilder urlPath = new StringBuilder(minIOConfigProperties.getReadPath());
-            urlPath.append(separator+minIOConfigProperties.getBucket());
+            urlPath.append(separator).append(minIOConfigProperties.getBucket());
             urlPath.append(separator);
             urlPath.append(filePath);
             return urlPath.toString();
