@@ -1,7 +1,6 @@
 package com.heima.wemedia.service;
 
 import com.heima.file.service.FileStorageService;
-import com.heima.utils.common.Tess4jUtils;
 import com.heima.wemedia.WemediaApplication;
 import lombok.SneakyThrows;
 import org.junit.Test;
@@ -39,8 +38,8 @@ public class WmNewsAutoScanServiceTest {
         ByteArrayInputStream in = new ByteArrayInputStream(bytes);
         BufferedImage imageFile = ImageIO.read(in);
         //识别文件
-        String result = Tess4jUtils.doOCR(imageFile);
-        System.out.println("识别内容：------------------");
-        System.out.println(result);
+//        String result = Tess4jUtils.doOCR(imageFile);
+//        System.out.println("识别内容：------------------");
+//        System.out.println(result);
     }
 }

@@ -6,6 +6,7 @@ import com.heima.apis.article.IArticleClient;
 import com.heima.common.aliyun.GreenImageScan;
 import com.heima.common.aliyun.GreenTextScan;
 //import com.heima.common.tess4j.Tess4jClient;
+import com.heima.common.tess4j.Tess4jClient;
 import com.heima.file.service.FileStorageService;
 import com.heima.model.article.dtos.ArticleDto;
 import com.heima.model.common.dtos.ResponseResult;
@@ -172,8 +173,8 @@ public class WmNewsAutoScanServiceImpl implements WmNewsAutoScanService {
     @Autowired
     private GreenImageScan greenImageScan;
 
-//    @Autowired
-//    private Tess4jClient tess4jClient;
+    @Autowired
+    private Tess4jClient tess4jClient;
 
     /**
      * 审核图片
@@ -205,12 +206,12 @@ public class WmNewsAutoScanServiceImpl implements WmNewsAutoScanService {
                 BufferedImage bufferedImage = ImageIO.read(in);
 
                 //图片识别
-//                String result = tess4jClient.doOCR(bufferedImage);
+                String result = tess4jClient.doOCR(bufferedImage);
                 //过滤文字
-//                boolean isSensitive = handleSensitiveScan(result, wmNews);
-//                if(!isSensitive){
-//                    return isSensitive;
-//                }
+                boolean isSensitive = handleSensitiveScan(result, wmNews);
+                if(!isSensitive){
+                    return isSensitive;
+                }
                 imageList.add(bytes);
 
             }
