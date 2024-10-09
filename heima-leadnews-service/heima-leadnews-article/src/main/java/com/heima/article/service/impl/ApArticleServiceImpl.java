@@ -15,6 +15,7 @@ import com.heima.model.article.pojos.ApArticleConfig;
 import com.heima.model.article.pojos.ApArticleContent;
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.common.enums.AppHttpCodeEnum;
+import freemarker.template.TemplateException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -22,6 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -88,7 +90,7 @@ public class ApArticleServiceImpl extends ServiceImpl<ApArticleMapper, ApArticle
      * @return
      */
     @Override
-    public ResponseResult saveArticle(ArticleDto dto) {
+    public ResponseResult saveArticle(ArticleDto dto) throws TemplateException, IOException {
 
 //        try {
 //            Thread.sleep(3000);
