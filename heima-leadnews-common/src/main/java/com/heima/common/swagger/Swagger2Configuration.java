@@ -1,6 +1,5 @@
 package com.heima.common.swagger;
 
-
 import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,16 +13,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/**
- * <p>
- * description
- * </p>
- *
- * @author ZangYT
- * @since 2024/7/26 23:17
- */
 @Configuration
-//@EnableSwagger2
+@EnableSwagger2
 @EnableKnife4j
 @Import(BeanValidatorPluginsConfiguration.class)
 public class Swagger2Configuration {

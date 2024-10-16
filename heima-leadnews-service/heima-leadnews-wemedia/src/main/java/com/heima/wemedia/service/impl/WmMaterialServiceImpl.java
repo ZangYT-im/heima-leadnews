@@ -94,7 +94,7 @@ public class WmMaterialServiceImpl extends ServiceImpl<WmMaterialMapper, WmMater
         }
 
         //按照用户查询
-        lambdaQueryWrapper.eq(WmMaterial::getUserId, WmThreadLocalUtil.getUser().getId());
+        lambdaQueryWrapper.eq(WmMaterial::getUserId,WmThreadLocalUtil.getUser().getId());
 
         //按照时间倒序
         lambdaQueryWrapper.orderByDesc(WmMaterial::getCreatedTime);

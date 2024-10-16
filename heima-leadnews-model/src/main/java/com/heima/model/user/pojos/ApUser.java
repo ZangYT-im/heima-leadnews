@@ -1,14 +1,5 @@
 package com.heima.model.user.pojos;
 
-/**
- * <p>
- * description
- * </p>
- *
- * @author ZangYT
- * @since 2024/7/24 23:17
- */
-
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -69,15 +60,15 @@ public class ApUser implements Serializable {
 
     /**
      * 0 男
-     1 女
-     2 未知
+            1 女
+            2 未知
      */
     @TableField("sex")
     private Boolean sex;
 
     /**
      * 0 未
-     1 是
+            1 是
      */
     @TableField("is_certification")
     private Boolean certification;
@@ -90,15 +81,15 @@ public class ApUser implements Serializable {
 
     /**
      * 0正常
-     1锁定
+            1锁定
      */
     @TableField("status")
     private Boolean status;
 
     /**
      * 0 普通用户
-     1 自媒体人
-     2 大V
+            1 自媒体人
+            2 大V
      */
     @TableField("flag")
     private Short flag;

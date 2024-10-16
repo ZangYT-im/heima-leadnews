@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 public class WmTokenInterceptor implements HandlerInterceptor {
 
     /**
-//     * 得到header中的用户信息，并且存入到当前线程中
-//     * @param request
-//     * @param response
-//     * @param handler
-//     * @return
-//     * @throws Exception
-//     */
+     * 得到header中的用户信息，并且存入到当前线程中
+     * @param request
+     * @param response
+     * @param handler
+     * @return
+     * @throws Exception
+     */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String userId = request.getHeader("userId");
@@ -41,6 +41,11 @@ public class WmTokenInterceptor implements HandlerInterceptor {
      */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+//        WmThreadLocalUtil.clear();
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         WmThreadLocalUtil.clear();
     }
 }

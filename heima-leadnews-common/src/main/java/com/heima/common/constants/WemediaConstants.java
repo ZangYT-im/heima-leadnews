@@ -1,15 +1,5 @@
 package com.heima.common.constants;
 
-/**
- * <p>
- * description
- * </p>
- *
- * @author zangyt
- * @since 2024/9/8 16:03
- */
-
-
 public class WemediaConstants {
 
     public static final Short COLLECT_MATERIAL = 1;//收藏
